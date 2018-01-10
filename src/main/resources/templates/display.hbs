@@ -1,0 +1,20 @@
+
+{{#partial "content"}}
+
+    <h1>List of Places:</h1>
+    {{#if allPlaces}}
+        {{#each allPlaces}}
+            <p>Name of Place: {{name}}</p>
+            <p>Date Visited: {{date}}</p>
+            <p>Lived: {{lived}}</p>
+            <p>Food Consumed: {{food}}</p>
+            <p>Activities Performed: {{activities}}</p>
+            <p>-----------------------------------------</p>
+        {{/each}}
+{{else}}
+        <p>You have never been anywhere. Therefore, you don't exist.</p>
+    {{/if}}
+
+{{/partial}}
+
+{{> layout.hbs}}

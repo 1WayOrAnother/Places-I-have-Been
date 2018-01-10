@@ -1,0 +1,30 @@
+{{#partial "content"}}
+
+    <h1>Add a Place</h1>
+
+    <form action="/new" method="POST">
+        <label for="name">Name of Place Visited</label>
+        <input id="name" name="name" type="text">
+
+        <label for="date">Date Visited</label>
+        <input id="date" name="date" type="date">
+
+        <label for="lived">Did you live there?</label>
+        <input name="lived" value="true" type="radio">Yes
+        <input name="lived" value="false" type="radio">No
+
+        <label for="food">Food Eaten</label>
+        <input id="food" name="food" type="text">
+
+        <label for="activities">Activities</label>
+        <input id="activities" name="activities" type="text">
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <form action="/display" method="GET">
+        <button type="submit">Show all</button>
+    </form>
+{{/partial}}
+
+{{> layout.hbs}}
